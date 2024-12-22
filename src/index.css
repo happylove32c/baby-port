@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-fade {
+    opacity: 0; /* Start completely invisible */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+  }
+  
+  [data-aos="fade-in"].aos-animate {
+    opacity: 1; /* Fully visible when animation completes */
+  }
+  
+  [data-aos="rotate"] {
+    transform: rotate(0deg); /* Initial state */
+    opacity: 0; /* Start invisible */
+  }
+  
+  [data-aos="rotate"].aos-animate {
+    transform: rotate(360deg); /* Final rotation */
+    opacity: 1; /* Fully visible */
+    transition: transform 1s ease, opacity 1s ease; /* Match duration with AOS duration */
+  }
+
+  /* .images{
+    animation: slide 20s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */
+
+  .images img{
+    padding: 1rem;
+  }
